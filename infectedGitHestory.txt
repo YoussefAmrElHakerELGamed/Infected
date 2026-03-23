@@ -1,0 +1,160 @@
+* commit b199e6542f0177b9415e6e30c90d1856f9a407a4 (HEAD -> main, origin/main, origin/HEAD)
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Mon Jul 14 13:49:47 2025 +0200
+| 
+|     implementation for the ability linker
+|     
+|     implementation for Mahmoud edits
+|     added a linker to the system to make the logic and activation separate
+| 
+* commit ae487d22575ff37bd61b88c72c26af3002a4f1ef
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Thu Jul 10 17:00:50 2025 +0200
+| 
+|     fixed for the event and save system
+| 
+* commit 78a23843b1296abb1c960b9b6704f4c6303b1f8b
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Mon Jul 7 19:25:49 2025 +0200
+| 
+|     fixes
+|     
+|     sounds was not setting up in the beginning
+|     
+|     controls was showing in the pc mode
+|     fixed
+|   
+*   commit 110d5a0eb5ebf3aaf3bfb13062f9c8bec0380d2e (tag: android, tag: Windows)
+|\  Merge: 1c18126 6bf6f02
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Mon Jul 7 14:10:43 2025 +0200
+| | 
+| |     Merge branch 'inputs-edit'
+| | 
+| * commit 6bf6f02d7ef62afcc828e3c30a2444ae6236f35a (origin/inputs-edit)
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Mon Jul 7 14:09:26 2025 +0200
+| | 
+| |     fixes for some bugs
+| |     
+| |     joystick was sticking and now fixed by increasing the order layer
+| |     
+| |     added event driven functions to off load some preformance from the update
+| | 
+* | commit 1c1812650b55ae1127e480348c7cdaccb0350367
+|\| Merge: 178df1c 7e220a9
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Sun Jul 6 16:38:50 2025 +0300
+| | 
+| |     Merge pull request from YoussefAmrElHakerELGamed/inputs-edit
+| |     
+| |     Inputs edit
+| | 
+| * commit 7e220a9c8f95277af9e61ae8987a11e795e1fa92
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Sun Jul 6 15:34:08 2025 +0200
+| | 
+| |     final touches
+| |     
+| |     options is completely finished
+| |     bug fixes
+| |     full controls customer
+| | 
+| * commit 3512fd1fe0f439bb1567cd1600f875a1fb6df111
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Sun Jun 29 17:03:37 2025 +0200
+| | 
+| |     More edits
+| |     
+| |     more options
+| |     added the ability to edit the controls on android
+| |     edits on player movements
+| | 
+| * commit 7ddec606249ff219f3aca14993f145fac03b8aca
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Sat Jun 21 00:41:13 2025 +0200
+| | 
+| |     Reapply "more stuff added"
+| |     
+| |     This reverts commit a66a6e3315021e203e43e114e1c3e3fa115f983a.
+| | 
+| * commit a66a6e3315021e203e43e114e1c3e3fa115f983a
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Sat Jun 21 00:41:04 2025 +0200
+| | 
+| |     Revert "more stuff added"
+| |     
+| |     This reverts commit c4d8feb76182f468de1a59fa0cf1bf64e580753c.
+| | 
+| * commit c4d8feb76182f468de1a59fa0cf1bf64e580753c
+| | Author: Youssef amr <amry14003@gmail.com>
+| | Date:   Tue Jun 17 15:39:15 2025 +0200
+| | 
+| |     more stuff added
+| |     
+| |     rework for the mouse and spowner
+| |     added support for the new Input system
+| | 
+| * commit 6d8c42c1f7058aa61dc6806dddea69b78da45335
+|/  Author: Youssef amr <amry14003@gmail.com>
+|   Date:   Wed Jun 11 15:27:44 2025 +0200
+|   
+|       input
+| 
+* commit 178df1c5201c676db7f78b9999401212e2ca4fe8
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Mon Jun 9 16:53:31 2025 +0200
+| 
+|     fix for the player movement -finally-
+| 
+* commit 50ae4e2e2a3f3e97644aca45f547a9490f89d627
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Sun Jun 8 13:08:02 2025 +0200
+| 
+|     fix bugs
+|     
+|     player movement and spowner behaver
+| 
+* commit ebbbbc7bddb050bede1e00a8bd45f862e534a70d
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Fri Jun 6 23:05:44 2025 +0200
+| 
+|     fixing minor bugs
+| 
+* commit 4ee806040eaa021f9eed99b717d25b0ab22d3421
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Fri Jun 6 19:39:13 2025 +0200
+| 
+|     bug fixes and game accessibility enhances
+| 
+* commit 872364b3a5e906668dcedb1a9cde7cafb7217cc1
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Thu Jun 5 17:21:45 2025 +0200
+| 
+|     fixing the upgrades screen
+|     
+|     the upgrade screen was not showing for some reason so here is a fix \(-_-\
+| 
+* commit f497cc6501b42b4bd8464df05121fc98f47587a1
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Thu Jun 5 15:59:28 2025 +0200
+| 
+|     update the libraries
+| 
+* commit 6dcd0c410b21b58516c3c66041bd3480623335a1 (tag: v1.0.5)
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Thu Jun 5 15:25:25 2025 +0300
+| 
+|     Update README.md
+| 
+* commit 89a473a574d93293ee6895da66e7691c76135be0
+| Author: Youssef amr <amry14003@gmail.com>
+| Date:   Thu Jun 5 15:24:52 2025 +0300
+| 
+|     Update README.md
+| 
+* commit 92a3f6abd7534f576c7cb27e21ead28f5f4ddfd0
+  Author: Youssef amr <amry14003@gmail.com>
+  Date:   Thu Jun 5 14:14:07 2025 +0200
+  
+      Initial commit
