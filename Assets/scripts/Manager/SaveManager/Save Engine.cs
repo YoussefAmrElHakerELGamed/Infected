@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.IO;
 using System.Text;
+using System.Collections;
 
 public class SaveEngine : MonoBehaviour
 {
     [SerializeField] private bool UseEncryption = true;
     [SerializeField] private string EncryptionKey = "YoussefAmr";
     [SerializeField] private string SaveFileName = "save.ysa";
+    [SerializeField] private float AutoSaveTimer = 60f;
 
     public SaveData SaveData { get; private set; }
     public static SaveEngine Instance { get; private set; }
@@ -26,6 +28,8 @@ public class SaveEngine : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(AutoSave());
+
         if (IsSaved())
         {
             LoadGameSave();
@@ -81,5 +85,18 @@ public class SaveEngine : MonoBehaviour
             m_string.Append((char)(data[_char] ^ EncryptionKey[_char % EncryptionKey.Length]));
 
         return m_string.ToString();
+    }
+
+    void OnApplicationQuit()
+    {
+        SaveGameSave();
+    }
+
+    private IEnumerator AutoSave()
+    {
+        yield return new WaitForSecondsRealtime(AutoSaveTimer);
+        SaveGameSave();
+
+        StartCoroutine(AutoSave());
     }
 }
