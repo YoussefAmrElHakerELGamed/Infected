@@ -74,7 +74,7 @@ namespace UnityEngine.InputSystem
     /// }
     /// </code>
     /// </example>
-    public partial class @Input_system: IInputActionCollection2, IDisposable
+    public partial class @NewInputSystem: IInputActionCollection2, IDisposable
     {
         /// <summary>
         /// Provides access to the underlying asset instance.
@@ -84,7 +84,7 @@ namespace UnityEngine.InputSystem
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public @Input_system()
+        public @NewInputSystem()
         {
             asset = InputActionAsset.FromJson(@"{
     ""version"": 1,
@@ -95,322 +95,46 @@ namespace UnityEngine.InputSystem
             ""id"": ""df70fa95-8a34-4494-b137-73ab6b9c7d37"",
             ""actions"": [
                 {
-                    ""name"": ""PC move"",
-                    ""type"": ""Button"",
-                    ""id"": ""358435e8-b0e2-4cfc-b5e2-d494b147f104"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""351f2ccd-1f9f-44bf-9bec-d62ac5c5f408"",
+                    ""id"": ""96eacd66-50c3-4045-8688-6f3b6bdc9a93"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Fire"",
-                    ""type"": ""Button"",
-                    ""id"": ""6c2ab1b8-8984-453a-af3d-a3c78ae1679a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Reloud"",
-                    ""type"": ""Button"",
-                    ""id"": ""1c3206ec-de68-483b-8b89-b878b02fc383"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Change ability"",
+                    ""name"": ""Mobile Move"",
                     ""type"": ""Value"",
-                    ""id"": ""3973b516-1b99-4cfc-8771-1b19efaa2921"",
-                    ""expectedControlType"": ""Axis"",
+                    ""id"": ""0e8d8e03-7b40-4dee-b46a-0e5a58667357"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Use ability"",
-                    ""type"": ""Button"",
-                    ""id"": ""70baed84-b09c-4cba-840b-81b09ec88862"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""794f5f13-5f8b-4069-8772-df104924631e"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""978bfe49-cc26-4a3d-ab7b-7d7a29327403"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""id"": ""7fdc9825-a68e-4740-9897-454aeb1d6adf"",
+                    ""path"": ""<Pointer>/position"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad;Keyboard&Mouse;Touch"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fd290e29-641f-4351-b26b-71443513c6c4"",
+                    ""id"": ""59c96a17-ec47-496e-9486-ce49ef792ff9"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Gamepad;Keyboard&Mouse;Touch"",
-                    ""action"": ""Move"",
+                    ""groups"": """",
+                    ""action"": ""Mobile Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""143bb1cd-cc10-4eca-a2f0-a3664166fe91"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad;Keyboard&Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3db655e3-ad23-4046-b9da-756a4bffb885"",
-                    ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Use ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a01bb86c-f555-42e9-8659-e647b6568de6"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Use ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4b92181b-123e-470c-b833-235bef5b5795"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e442c160-7416-47d0-a42a-695fbb8673f4"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4029fcd0-41ba-4718-b615-94dc87d986af"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PC move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""11efd2a6-a5c8-44f2-8e0c-a5c17643ed5d"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reloud"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fc5b656a-666d-41b8-a8bf-f32882716edb"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reloud"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9cb95614-a23a-4bfb-a92d-343a88ef1e8d"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reloud"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""fe05234f-f466-4412-916c-223d987c1693"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""1fd56d1c-a2f7-4fe6-a740-326d02cbb701"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""ec30f58b-0cff-47d9-bc85-31aa0c149bc4"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""906a3276-045a-49a9-b5e8-8b459e3211e4"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""216f2be5-d255-4697-811e-91a39aecca61"",
-                    ""path"": ""<Gamepad>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""34fdff09-8a20-468a-bca2-c8e089574118"",
-                    ""path"": ""<Gamepad>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""77eba9f7-4733-43c0-a35b-a1ee29522ae9"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""d8ce8b48-4453-4c6e-9109-886ed01e46c5"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""62116b2d-9cae-4e0b-a662-b60c1dfbd252"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""06b35f34-6608-4f31-bdf2-47518feeaed4"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""1755237e-642a-4f9b-a30f-c6e8959ab520"",
-                    ""path"": ""<Keyboard>/z"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Change ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -1131,13 +855,8 @@ namespace UnityEngine.InputSystem
 }");
             // Player
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-            m_Player_PCmove = m_Player.FindAction("PC move", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-            m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-            m_Player_Reloud = m_Player.FindAction("Reloud", throwIfNotFound: true);
-            m_Player_Changeability = m_Player.FindAction("Change ability", throwIfNotFound: true);
-            m_Player_Useability = m_Player.FindAction("Use ability", throwIfNotFound: true);
-            m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+            m_Player_MobileMove = m_Player.FindAction("Mobile Move", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1153,10 +872,10 @@ namespace UnityEngine.InputSystem
             m_UI_Zoom = m_UI.FindAction("Zoom", throwIfNotFound: true);
         }
 
-        ~@Input_system()
+        ~@NewInputSystem()
         {
-            UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, Input_system.Player.Disable() has not been called.");
-            UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, Input_system.UI.Disable() has not been called.");
+            UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, NewInputSystem.Player.Disable() has not been called.");
+            UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, NewInputSystem.UI.Disable() has not been called.");
         }
 
         /// <summary>
@@ -1232,52 +951,27 @@ namespace UnityEngine.InputSystem
         // Player
         private readonly InputActionMap m_Player;
         private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-        private readonly InputAction m_Player_PCmove;
         private readonly InputAction m_Player_Move;
-        private readonly InputAction m_Player_Fire;
-        private readonly InputAction m_Player_Reloud;
-        private readonly InputAction m_Player_Changeability;
-        private readonly InputAction m_Player_Useability;
-        private readonly InputAction m_Player_Pause;
+        private readonly InputAction m_Player_MobileMove;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
         public struct PlayerActions
         {
-            private @Input_system m_Wrapper;
+            private @NewInputSystem m_Wrapper;
 
             /// <summary>
             /// Construct a new instance of the input action map wrapper class.
             /// </summary>
-            public PlayerActions(@Input_system wrapper) { m_Wrapper = wrapper; }
-            /// <summary>
-            /// Provides access to the underlying input action "Player/PCmove".
-            /// </summary>
-            public InputAction @PCmove => m_Wrapper.m_Player_PCmove;
+            public PlayerActions(@NewInputSystem wrapper) { m_Wrapper = wrapper; }
             /// <summary>
             /// Provides access to the underlying input action "Player/Move".
             /// </summary>
             public InputAction @Move => m_Wrapper.m_Player_Move;
             /// <summary>
-            /// Provides access to the underlying input action "Player/Fire".
+            /// Provides access to the underlying input action "Player/MobileMove".
             /// </summary>
-            public InputAction @Fire => m_Wrapper.m_Player_Fire;
-            /// <summary>
-            /// Provides access to the underlying input action "Player/Reloud".
-            /// </summary>
-            public InputAction @Reloud => m_Wrapper.m_Player_Reloud;
-            /// <summary>
-            /// Provides access to the underlying input action "Player/Changeability".
-            /// </summary>
-            public InputAction @Changeability => m_Wrapper.m_Player_Changeability;
-            /// <summary>
-            /// Provides access to the underlying input action "Player/Useability".
-            /// </summary>
-            public InputAction @Useability => m_Wrapper.m_Player_Useability;
-            /// <summary>
-            /// Provides access to the underlying input action "Player/Pause".
-            /// </summary>
-            public InputAction @Pause => m_Wrapper.m_Player_Pause;
+            public InputAction @MobileMove => m_Wrapper.m_Player_MobileMove;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -1304,27 +998,12 @@ namespace UnityEngine.InputSystem
             {
                 if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
                 m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-                @PCmove.started += instance.OnPCmove;
-                @PCmove.performed += instance.OnPCmove;
-                @PCmove.canceled += instance.OnPCmove;
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @Fire.started += instance.OnFire;
-                @Fire.performed += instance.OnFire;
-                @Fire.canceled += instance.OnFire;
-                @Reloud.started += instance.OnReloud;
-                @Reloud.performed += instance.OnReloud;
-                @Reloud.canceled += instance.OnReloud;
-                @Changeability.started += instance.OnChangeability;
-                @Changeability.performed += instance.OnChangeability;
-                @Changeability.canceled += instance.OnChangeability;
-                @Useability.started += instance.OnUseability;
-                @Useability.performed += instance.OnUseability;
-                @Useability.canceled += instance.OnUseability;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
+                @MobileMove.started += instance.OnMobileMove;
+                @MobileMove.performed += instance.OnMobileMove;
+                @MobileMove.canceled += instance.OnMobileMove;
             }
 
             /// <summary>
@@ -1336,27 +1015,12 @@ namespace UnityEngine.InputSystem
             /// <seealso cref="PlayerActions" />
             private void UnregisterCallbacks(IPlayerActions instance)
             {
-                @PCmove.started -= instance.OnPCmove;
-                @PCmove.performed -= instance.OnPCmove;
-                @PCmove.canceled -= instance.OnPCmove;
                 @Move.started -= instance.OnMove;
                 @Move.performed -= instance.OnMove;
                 @Move.canceled -= instance.OnMove;
-                @Fire.started -= instance.OnFire;
-                @Fire.performed -= instance.OnFire;
-                @Fire.canceled -= instance.OnFire;
-                @Reloud.started -= instance.OnReloud;
-                @Reloud.performed -= instance.OnReloud;
-                @Reloud.canceled -= instance.OnReloud;
-                @Changeability.started -= instance.OnChangeability;
-                @Changeability.performed -= instance.OnChangeability;
-                @Changeability.canceled -= instance.OnChangeability;
-                @Useability.started -= instance.OnUseability;
-                @Useability.performed -= instance.OnUseability;
-                @Useability.canceled -= instance.OnUseability;
-                @Pause.started -= instance.OnPause;
-                @Pause.performed -= instance.OnPause;
-                @Pause.canceled -= instance.OnPause;
+                @MobileMove.started -= instance.OnMobileMove;
+                @MobileMove.performed -= instance.OnMobileMove;
+                @MobileMove.canceled -= instance.OnMobileMove;
             }
 
             /// <summary>
@@ -1410,12 +1074,12 @@ namespace UnityEngine.InputSystem
         /// </summary>
         public struct UIActions
         {
-            private @Input_system m_Wrapper;
+            private @NewInputSystem m_Wrapper;
 
             /// <summary>
             /// Construct a new instance of the input action map wrapper class.
             /// </summary>
-            public UIActions(@Input_system wrapper) { m_Wrapper = wrapper; }
+            public UIActions(@NewInputSystem wrapper) { m_Wrapper = wrapper; }
             /// <summary>
             /// Provides access to the underlying input action "UI/Navigate".
             /// </summary>
@@ -1604,13 +1268,6 @@ namespace UnityEngine.InputSystem
         public interface IPlayerActions
         {
             /// <summary>
-            /// Method invoked when associated input action "PC move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnPCmove(InputAction.CallbackContext context);
-            /// <summary>
             /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>
             /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -1618,40 +1275,12 @@ namespace UnityEngine.InputSystem
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnMove(InputAction.CallbackContext context);
             /// <summary>
-            /// Method invoked when associated input action "Fire" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// Method invoked when associated input action "Mobile Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>
             /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnFire(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "Reloud" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnReloud(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "Change ability" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnChangeability(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "Use ability" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnUseability(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnPause(InputAction.CallbackContext context);
+            void OnMobileMove(InputAction.CallbackContext context);
         }
         /// <summary>
         /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

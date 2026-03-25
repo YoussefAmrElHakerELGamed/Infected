@@ -59,6 +59,8 @@
   "dotnet.defaultSolution": "Infected.slnx",
   "cSpell.words": [
     "Behaviour",
+    "Rigidbody",
+    "Scriptable",
     "Youssef"
   ]
 }
