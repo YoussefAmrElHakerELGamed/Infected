@@ -54,7 +54,7 @@ public class PlayerGun : MonoBehaviour
         m_spawnedBullet.GetComponent<GunBullet>().SetDamage(gun.GunDamage);
         _pRb.AddForce(gun.GunRecoilForce * -_t.up, ForceMode2D.Impulse);
 
-        m_spawnedBullet.GetComponent<Rigidbody2D>().AddForce(gun.GunFiringForce * m_spawnedBullet.transform.up, ForceMode2D.Impulse);
+        m_spawnedBullet.GetComponent<GunBullet>().Move(gun.GunFiringForce);
 
         _bulletFired++;
         yield return new WaitForSeconds(1f / gun.GunFireRate);
