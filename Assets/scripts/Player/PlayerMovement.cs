@@ -5,8 +5,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerMovementModule[] playerMovementModules;
     private Rigidbody2D _rb;
-    private Transform _t;
-
     #region inputs
     private NewInputSystem _inputActions;
     void Awake()
@@ -28,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _t = transform;
     }
 
     void FixedUpdate()
