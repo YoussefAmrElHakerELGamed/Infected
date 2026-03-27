@@ -20,7 +20,7 @@ public class General_AI : MonoBehaviour
 
     protected virtual void AddRandomRotation()
     {
-        _rb.AddTorque(Mathf.Sign(Random.value - 0.5f) * RotationSpeed, ForceMode2D.Impulse);
+        _rb.AddTorque(Mathf.Sign(Random.value - 0.5f) * 2 * RotationSpeed, ForceMode2D.Impulse);
     }
 
     protected virtual void ExecuteMovement()

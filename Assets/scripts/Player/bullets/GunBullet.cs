@@ -22,7 +22,7 @@ public class GunBullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.layer == LayerMask.GetMask("enemies"))
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("enemies"))
         {
             collision.collider.gameObject.GetComponent<IDamageable>().takeDamage(_damage);
         }
