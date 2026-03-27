@@ -46,7 +46,7 @@ public class PlayerGun : MonoBehaviour
     private Coroutine _fire;
     void Fire()
     {
-        if (_bulletFired >= gun.GunClipSize)
+        if (_bulletFired >= gun.GunClipSize || _reloading != null)
             return;
         _fire ??= StartCoroutine(fireGun());
     }

@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEditor.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class Spawner : MonoBehaviour
         _mainSceneCamera = Camera.main;
 
         // call for first wave
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemies());
 
         // call spawner to spawn when finish upgrading
         // event => spawnEnemies()
