@@ -41,6 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Screen_bow: 10
     - _UseLines: 1
     - _Use_dirt: 1
     - _apply: 1
