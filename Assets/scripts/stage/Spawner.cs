@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class Spawner : MonoBehaviour
             Vector2 m_spawnLocation = GetRandomLoc();
 
             GameObject m_spawnEnemy = Instantiate(stageData.StageEnemies[m_enemyIdx], m_spawnLocation, Quaternion.identity, _objTransform);
+            m_spawnEnemy.GetComponent<EnemiesHealth>().SetHardness(stageData.HardnessFactor);
+
             yield return new WaitForSeconds(1f / stageData.SpawnRate);
         }
         WaveFinished();

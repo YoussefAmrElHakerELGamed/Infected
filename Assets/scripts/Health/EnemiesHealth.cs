@@ -15,6 +15,12 @@ public class EnemiesHealth : BaseHealth
         base.takeDamage(damage);
     }
 
+    public void SetHardness(float hardnessFactor)
+    {
+        _currentHealth *= hardnessFactor;
+        OnCollisionDamage *= hardnessFactor;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(PLAYERTAG))
