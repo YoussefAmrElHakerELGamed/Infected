@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e33439a867ec147ae65117c5697a4e, type: 3}
+  m_Name: machine gun
+  m_EditorClassIdentifier: Assembly-CSharp::Gun
+  GunSprite: {fileID: 6757282713640645180, guid: 70309db1538aefc47b23afdf93b928c3, type: 3}
+  GunBulletPrefab: {fileID: 1384402156118801920, guid: 3050753cfb969654c860d0ef5e96367c, type: 3}
+  GunFirePoints:
+  - {x: -0.1, y: 0.5}
+  - {x: 0.1, y: 0.5}
+  GunFireRate: 10
+  GunDamage: 2
+  GunRecoilForce: 5
+  GunFiringForce: 5
+  GunClipSize: 100
+  GunReloadTime: 5

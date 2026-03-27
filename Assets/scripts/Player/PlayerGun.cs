@@ -30,8 +30,17 @@ public class PlayerGun : MonoBehaviour
     {
         _t = transform;
         _pRb = _t.parent.GetComponent<Rigidbody2D>();
-        _inputActions.Player.Fire.performed += _ => Fire();
+        GetComponent<SpriteRenderer>().sprite = gun.GunSprite;
+
         _inputActions.Player.Reload.performed += _ => Reload();
+    }
+
+    void Update()
+    {
+        if (_inputActions.Player.Fire.IsInProgress())
+        {
+            Fire();
+        }
     }
 
     private Coroutine _fire;
@@ -48,13 +57,14 @@ public class PlayerGun : MonoBehaviour
 
         GameObject m_spawnedBullet = Instantiate(
             gun.GunBulletPrefab,
-            gun.GunFirePoints[m_RFireLoc],
+            // local transition y * up + x * right
+            gun.GunFirePoints[m_RFireLoc].y * _t.up + gun.GunFirePoints[m_RFireLoc].x * _t.right + _t.position,
             Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, _t.up)));
 
         m_spawnedBullet.GetComponent<GunBullet>().SetDamage(gun.GunDamage);
-        _pRb.AddForce(gun.GunRecoilForce * -_t.up, ForceMode2D.Impulse);
-
         m_spawnedBullet.GetComponent<GunBullet>().Move(gun.GunFiringForce);
+
+        _pRb.AddForce(gun.GunRecoilForce * -_t.up, ForceMode2D.Impulse);
 
         _bulletFired++;
         yield return new WaitForSeconds(1f / gun.GunFireRate);
@@ -69,7 +79,7 @@ public class PlayerGun : MonoBehaviour
 
     private IEnumerator reloadGun()
     {
-        yield return new WaitForSeconds(gun.GunReloadTime);
+        yield return new WaitForSeconds(_bulletFired / gun.GunClipSize * gun.GunReloadTime);
         // visuals will be taken care of by firing events with the time
         _bulletFired = 0;
         _reloading = null;

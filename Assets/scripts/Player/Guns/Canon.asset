@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e33439a867ec147ae65117c5697a4e, type: 3}
+  m_Name: Canon
+  m_EditorClassIdentifier: Assembly-CSharp::Gun
+  GunSprite: {fileID: 7388399842426930641, guid: 70309db1538aefc47b23afdf93b928c3, type: 3}
+  GunBulletPrefab: {fileID: 1254198252998187676, guid: 6460f5aaaa3d26a49b86496e0dd715c2, type: 3}
+  GunFirePoints:
+  - {x: 0, y: 0.6}
+  GunFireRate: 2
+  GunDamage: 10
+  GunRecoilForce: 20
+  GunFiringForce: 10
+  GunClipSize: 10
+  GunReloadTime: 1

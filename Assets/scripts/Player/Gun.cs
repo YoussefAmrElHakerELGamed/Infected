@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Gun", menuName = "Scriptable Objects/Gun")]
 public class Gun : ScriptableObject
 {
+    public Sprite GunSprite;
     public GameObject GunBulletPrefab;
     public Vector2[] GunFirePoints;
     public int GunFireRate;
