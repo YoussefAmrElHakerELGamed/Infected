@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Spawner : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnEnemies());
 
         // call spawner to spawn when finish upgrading
-        // event => spawnEnemies()
+        GameEventBus.Instance.OnHideAndApplyUpgrade += _ => StartCoroutine(SpawnEnemies());
     }
 
     private IEnumerator SpawnEnemies()
@@ -49,5 +50,17 @@ public class Spawner : MonoBehaviour
         _currentWave++;
         if (_currentWave % stageData.UnlockEnemyEvery == 0)
             _unlockedEnemiesIdx++;
+
+
+        GameEventBus.Instance.OnSpawnerWaveEnd?.Invoke(new()
+        {
+            waveNumber = _currentWave,
+            waveMaxEnemies = Mathf.CeilToInt(stageData.EnemiesProgression.Evaluate(_currentWave / stageData.NumberOfWaves) * stageData.MaxEnemyNumber)
+        });
+
+        GameEventBus.Instance.OnShowUpgradeScreen?.Invoke(new()
+        {
+            numberOfUpgradeCards = 4
+        });
     }
 }

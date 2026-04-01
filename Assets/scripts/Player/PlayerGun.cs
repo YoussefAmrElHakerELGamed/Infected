@@ -79,7 +79,7 @@ public class PlayerGun : MonoBehaviour
 
     private IEnumerator reloadGun()
     {
-        yield return new WaitForSeconds(_bulletFired / gun.GunClipSize * gun.GunReloadTime);
+        yield return new WaitForSeconds((float)_bulletFired / gun.GunClipSize * gun.GunReloadTime);
         // visuals will be taken care of by firing events with the time
         _bulletFired = 0;
         _reloading = null;

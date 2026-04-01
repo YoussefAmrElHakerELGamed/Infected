@@ -18,7 +18,7 @@ MonoBehaviour:
   - {x: -0.1, y: 0.5}
   - {x: 0.1, y: 0.5}
   GunFireRate: 10
-  GunDamage: 2
+  GunDamage: 10
   GunRecoilForce: 5
   GunFiringForce: 5
   GunClipSize: 100
