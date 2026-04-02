@@ -28,7 +28,7 @@ public class GameSceneManager : MonoBehaviour
 
     void Start()
     {
-        Instance.TransitionWithAddScene("GameScene", 1, true);
+        Instance.TransitionWithAddScene("MainMenu", 0, false);
     }
 
     /// <summary>
