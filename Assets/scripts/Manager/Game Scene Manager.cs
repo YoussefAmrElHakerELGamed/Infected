@@ -13,17 +13,17 @@ public class GameSceneManager : MonoBehaviour
 
     void Awake()
     {
-        SceneManager.activeSceneChanged += updateCanvasCameraLink;
+        SceneManager.sceneLoaded += updateCanvasCameraLink;
 
         if (Instance != null)
             return;
         Instance = this;
     }
 
-    private void updateCanvasCameraLink(Scene arg0, Scene arg1)
+    private void updateCanvasCameraLink(Scene scene, LoadSceneMode _mode_)
     {
         Canvas m_overlayCanvas = Overlay.gameObject.GetComponent<Canvas>();
-        m_overlayCanvas.worldCamera = arg1.GetRootGameObjects().First(obj => obj.CompareTag("MainCamera")).GetComponent<Camera>();
+        m_overlayCanvas.worldCamera = scene.GetRootGameObjects().First(obj => obj.CompareTag("MainCamera")).GetComponent<Camera>();
     }
 
     void Start()
@@ -117,7 +117,7 @@ public class SceneTransition
 
         Time.timeScale = 0;
         UnloadFromScene();
-        yield return new WaitForSecondsRealtime(_transitionDuration / 2f);
+        yield return new WaitForSecondsRealtime(_transitionDuration / 2);
         LoadToScene();
         Time.timeScale = 1;
 
