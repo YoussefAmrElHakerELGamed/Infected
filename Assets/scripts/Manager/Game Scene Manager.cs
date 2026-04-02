@@ -23,7 +23,7 @@ public class GameSceneManager : MonoBehaviour
     private void updateCanvasCameraLink(Scene arg0, Scene arg1)
     {
         Canvas m_overlayCanvas = Overlay.gameObject.GetComponent<Canvas>();
-        m_overlayCanvas.worldCamera = SceneManager.GetActiveScene().GetRootGameObjects().First(obj => obj.CompareTag("MainCamera")).GetComponent<Camera>();
+        m_overlayCanvas.worldCamera = arg1.GetRootGameObjects().First(obj => obj.CompareTag("MainCamera")).GetComponent<Camera>();
     }
 
     void Start()
