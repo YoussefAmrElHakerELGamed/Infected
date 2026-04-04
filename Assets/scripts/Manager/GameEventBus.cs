@@ -8,10 +8,11 @@ public class GameEventBus : MonoBehaviour
 
     #region player_events
     public Action<PlayerGunReloadEventMassage> OnPlayerGunReloaded;
+    public Action<PlayerTakeDamageEventArgs> OnPlayerTakeDamage;
     #endregion
 
     #region enemies
-    public Action OnEnemiesDeath;
+    public Action<OnEnemiesDeathEventArg> OnEnemiesDeath;
     #endregion
 
     #region waves_events
@@ -19,9 +20,16 @@ public class GameEventBus : MonoBehaviour
     public Action<SpawnerWaveEventMassage> OnSpawnerWaveEnd;
     #endregion
 
+    #region UI_events
+    public Action<OnScoreEventArg> OnScoreChange;
+    #endregion
+
     #region upgrade_screen_events
     public Action<OnUpgradeStartEventMassage> OnShowUpgradeScreen;
+    public Action<OnUpgradeSystemSelectedUpgradesEventArg> OnSystemSelectedUpgrade;
     public Action<OnHideAndApplyUpgradeEventMassage> OnHideAndApplyUpgrade;
+    public Action OnPlayerRerollUpgrades;
+    public Action OnRerollNotAllowed;
     #endregion
 
     #region build_system_events
@@ -49,6 +57,27 @@ public class GameEventBus : MonoBehaviour
     }
 }
 
+public struct PlayerTakeDamageEventArgs
+{
+    public float Health, MaxHealth;
+    public float Damage;
+}
+
+public struct OnEnemiesDeathEventArg
+{
+    public int enemyValue;
+    public enum enemyType
+    {
+        BaseEnemy
+    }
+    public enemyType type;
+}
+
+public struct OnScoreEventArg
+{
+    public int oldScore, scoreDif, newScore;
+}
+
 public struct BuildSystemEventMassage
 {
     public int GameObjectToBuild;
@@ -71,7 +100,12 @@ public struct OnUpgradeStartEventMassage
     // we could add rarity and such
 }
 
+public struct OnUpgradeSystemSelectedUpgradesEventArg
+{
+    public upgrade[] upgrade;
+}
+
 public struct OnHideAndApplyUpgradeEventMassage
 {
-    // public upgrade[] upgradesToApply;
+    public upgrade upgradeToApply;
 }

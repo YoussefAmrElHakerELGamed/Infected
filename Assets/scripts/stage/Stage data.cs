@@ -11,5 +11,6 @@ public class StageData : ScriptableObject
     public int MaxEnemyNumber;
     public AnimationCurve EnemiesProgression;
 
+    public int currentStageScore;
     public int NUmberOfWaves { get; internal set; }
 }

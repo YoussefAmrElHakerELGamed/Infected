@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class MenuNavigator : MonoBehaviour
 {
     [SerializeField] private GameObject[] menus;
+    [SerializeField] private bool StopTimeWhenNavigating = false;
     private Stack<GameObject> LoadedMenus = new();
 
     void Start()
@@ -14,6 +15,9 @@ public class MenuNavigator : MonoBehaviour
     public void EnterMenuIdx(int idx)
     {
         EnterMenu(menus[idx]);
+        if (StopTimeWhenNavigating)
+            Time.timeScale = idx == 0 ? 1 : 0;
+
     }
 
     public void ExitCurrentMenu()
