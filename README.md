@@ -1,25 +1,101 @@
-# 🧟 Infected
+# INFECTED
 
-**Infected** is a 2D tower defense game where players must navigate a post-outbreak computer system overrun by viruses. The game challenges your strategic thinking, and adaptability in a decaying world on the brink of collapse.
+### Your computer is infected. You are the anti-virus. Survive.
 
-## 🎮 Features
+---
 
-- ⚔️ Real-time combat
-- 🧠 Adaptive enemy AI and infection system  
-- 🏃 Resource management and survival progression  
+## What Is This?
 
-## 🛠️ Built With
+INFECTED is my passion project — a 2D top-down roguelite tower defense game with 2-bit pixel art and CRT glitch effects.
 
-- **Engine**: Unity, Pixelorama v1.0.5
-- **Language**: C#, HLSL  
-- **Frameworks/Libraries**: singleton structure
+You play as an anti-virus program. Waves of digital enemies want you dead. You build turrets, blast viruses, collect upgrade cards, and climb an infinite ladder of chaos. Everything glitches when you get hit. Because vibes.
 
-## 🧪 Gameplay
+---
 
-Players take on the role of survivors trying to clean or contain the outbreak. Choices affect the gameplay, story, and even the infection rate. Stay hidden, kill viruses, and survive the ever-mutating threat.
+## The Vibe
 
-## 📦 Installation
+- 2-bit pixel art (black, dark green, light green, white)
+- CRT scanlines and screen curvature
+- Screen shake when things explode
+- Glitch effects on low health and boss spawns
+- That one enemy that teleports (you'll hate it)
 
-```bash
-git clone https://github.com/yourusername/infected.git
-cd infected
+---
+
+## How It Plays
+
+Start Run → Choose Loadout → Fight Wave → Kill Enemies → Collect RAM → Build Equipment → Complete Wave → Pick 1 Upgrade Card → Repeat → Die → Earn Prestige Points → Unlock Tech Tree Upgrades → "One more run" (it's 3am)
+
+---
+
+## What You Can Do
+
+**9 Weapons** (from reliable to overkill)
+
+Simple Cannon, Machine Gun, Rocket Launcher, Laser Gun, Tesla Gun, Shotgun, Railgun, Flamethrower, Arc Blade
+
+**8 Equipment Types** (build your little army)
+
+Turret Module, Shield Module, Mines, Tesla Tower, Repair Drone, Decoy, Slow Field, EMP Bomb
+
+**4 Abilities**
+
+Rotate, Move (unlockable), Dash (unlockable), Teleport (unlockable)
+
+**30 Upgrade Cards**
+
+Damage, fire rate, health, lifesteal, armor, crit chance, and more. Golden cards are twice as good. Cards stack.
+
+**11 Enemy Types**
+
+Crawlers, Spikers, Swarm, Bombers, Wraiths, Hulks, Shooters, Leeches, Splitters, Jammers, Carriers. Each wave gets harder. Bosses at waves 10, 20, and 30.
+
+---
+
+## Permanent Progression (Tech Tree)
+
+6 branches. 82 upgrades. 219 Prestige Points to max everything.
+
+- Core (health, speed, pickup range)
+- Weapons (unlock and upgrade 7 weapons)
+- Equipment (unlock and upgrade 4 equipment types)
+- Abilities (unlock Dash and Teleport)
+- Meta (rerolls, golden cards, score multiplier)
+- Survival (armor, regen, lifesteal)
+
+Prestige Points = your total run score divided by 1000. Every run makes you stronger.
+
+---
+
+## Controls
+
+Move: WASD or Arrow Keys
+Aim: Mouse Cursor
+Shoot: Left Mouse Button
+Switch Weapon: Number Keys (1-5) or Mouse Wheel
+Place Equipment: E + Mouse Position
+Dash: Spacebar (unlockable)
+Teleport: Right Mouse Button (unlockable)
+Pause: ESC
+
+---
+
+## Why I'm Making This
+
+I love roguelites. I love tower defense. I love old-school pixel art and CRT monitors. I wanted something I could play forever that gets harder every time and never really ends.
+
+INFECTED is that game.
+
+No microtransactions. No live service. Just a solid, replayable, challenging game with permanent progression and a lot of explosions.
+
+---
+
+## Current Status
+
+In active development. Core systems are built. Weapons, enemies, cards, and tech tree are designed. Working on polish, balance, and boss fights.
+
+Estimated release: when it's done and fun.
+
+---
+
+*Made with caffeine, pixel art, and questionable life choices.*
