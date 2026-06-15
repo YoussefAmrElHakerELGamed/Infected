@@ -99,3 +99,16 @@ Estimated release: when it's done and fun.
 ---
 
 *Made with caffeine, pixel art, and questionable life choices.*
+
+
+---
+
+## ⚖️ License
+
+**No license – All rights reserved.**
+
+This project is shared for **viewing and portfolio purposes only**.  
+You may not copy, modify, distribute, or use any part of this game or its assets without explicit written permission from the author.
+
+> 👤 **Author:** Youssef Amr – *The Solo Dev*
+
